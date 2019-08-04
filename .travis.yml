@@ -13,6 +13,7 @@ before_install:
   -in runtime/src/test/resources/test-variables.properties.enc -out runtime/src/test/resources/test-variables.properties
   -d
 - bash .util/build_xatkit.sh
+- bash .util/build_chat-platform.sh
 
 script:
 - mvn install
