@@ -1,9 +1,8 @@
 package com.xatkit.plugins.discord.platform.io;
 
-import com.xatkit.core.platform.io.RuntimeIntentProvider;
+import com.xatkit.plugins.chat.platform.io.ChatIntentProvider;
 import com.xatkit.plugins.discord.DiscordUtils;
 import com.xatkit.plugins.discord.platform.DiscordPlatform;
-import com.xatkit.plugins.chat.platform.io.ChatIntentProvider;
 import fr.inria.atlanmod.commons.log.Log;
 import net.dv8tion.jda.core.JDA;
 import org.apache.commons.configuration2.Configuration;
@@ -13,7 +12,7 @@ import static fr.inria.atlanmod.commons.Preconditions.checkNotNull;
 import static java.util.Objects.nonNull;
 
 /**
- * A Discord user {@link RuntimeIntentProvider}.
+ * A Discord user {@link ChatIntentProvider}.
  * <p>
  * This class relies on the <a href="https://github.com/DV8FromTheWorld/JDA">JDA library</a> to receive direct
  * messages and react to them. Note that this input provider only captures direct messages (sent in private channels)
@@ -24,7 +23,7 @@ import static java.util.Objects.nonNull;
  * receive messages through the JDA client.
  *
  * @see DiscordUtils
- * @see RuntimeIntentProvider
+ * @see ChatIntentProvider
  */
 public class DiscordIntentProvider extends ChatIntentProvider<DiscordPlatform> {
 
@@ -53,7 +52,7 @@ public class DiscordIntentProvider extends ChatIntentProvider<DiscordPlatform> {
      * bot token.
      *
      * @param runtimePlatform the {@link DiscordPlatform} containing this {@link DiscordIntentProvider}
-     * @param configuration    the {@link Configuration} used to retrieve the Discord bot token
+     * @param configuration   the {@link Configuration} used to retrieve the Discord bot token
      * @throws NullPointerException     if the provided {@code runtimePlatform} or {@code configuration} is {@code
      *                                  null}
      * @throws IllegalArgumentException if the provided Discord bot token is {@code null} or empty

@@ -1,11 +1,10 @@
 package com.xatkit.plugins.discord.platform.io;
 
-import com.xatkit.core.platform.io.RuntimeIntentProvider;
 import com.xatkit.plugins.discord.platform.DiscordPlatform;
 import org.apache.commons.configuration2.Configuration;
 
 /**
- * A generic Discord user {@link RuntimeIntentProvider}.
+ * A generic Discord user {@link com.xatkit.plugins.chat.platform.io.ChatIntentProvider}.
  * <p>
  * This class wraps the {@link DiscordIntentProvider} and allows to use it as a generic <i>ChatProvider</i> from the
  * <i>ChatPlatform</i>.

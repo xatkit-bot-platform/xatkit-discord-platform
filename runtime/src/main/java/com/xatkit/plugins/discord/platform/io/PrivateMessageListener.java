@@ -1,6 +1,7 @@
 package com.xatkit.plugins.discord.platform.io;
 
 import com.xatkit.core.XatkitCore;
+import com.xatkit.core.platform.io.IntentRecognitionHelper;
 import com.xatkit.core.session.XatkitSession;
 import com.xatkit.intent.RecognizedIntent;
 import com.xatkit.plugins.chat.ChatUtils;
@@ -93,7 +94,8 @@ public class PrivateMessageListener extends ListenerAdapter {
          * Call getRecognizedIntent before setting any context variable, the recognition triggers a decrement of all
          * the context variables.
          */
-        RecognizedIntent recognizedIntent = discordIntentProvider.getRecognizedIntent(content, xatkitSession);
+        RecognizedIntent recognizedIntent = IntentRecognitionHelper.getRecognizedIntent(content, xatkitSession,
+                xatkitCore);
         /*
          * The discord-related values are stored in the local context with a lifespan count of 1: they are reset
          * every time a message is received, and may cause consistency issues when using multiple IntentProviders.
