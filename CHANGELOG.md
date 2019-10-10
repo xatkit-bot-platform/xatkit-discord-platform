@@ -8,6 +8,8 @@ The changelog format is based on [Keep a Changelog](https://keepachangelog.com/e
 
 ## Unreleased
 
+## [2.1.0] - 2019-10-10
+
 ### Changed
 
 - `DiscordIntentProvider` and `ChatProvider` now use the new intent provider hierarchy (see [xatkit-runtime/#221](https://github.com/xatkit-bot-platform/xatkit-runtime/issues/221)). This doesn't change the public API, but requires to use the latest versions of [xatkit-runtime](https://github.com/xatkit-bot-platform/xatkit-runtime) and [xatkit-chat-platform](https://github.com/xatkit-bot-platform/xatkit-chat-platform).
