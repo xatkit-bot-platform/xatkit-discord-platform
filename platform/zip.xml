@@ -9,9 +9,6 @@
     </formats>
     <files>
         <file>
-            <source>DiscordPlatform.xmi</source>
-        </file>
-        <file>
             <source>DiscordPlatform.platform</source>
         </file>
     </files>
